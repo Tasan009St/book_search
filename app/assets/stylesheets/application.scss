@@ -1,0 +1,80 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+ 
+  body {
+    a:link {color:#a0522d; text-decoration:none }
+    a:visited { color:#a0522d; text-decoration:none }
+    li:link {color:#a0522d; text-decoration:none }
+}
+
+ /*footerを下にする設定*/
+ body,
+ #wrapper {
+   display: flex;
+   flex-direction: column;
+   min-height: 100vh;
+ }
+ 
+ footer {
+   margin-top: auto;
+ }
+
+
+  /*ヘッダーの設定*/
+ .container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+ }
+
+
+ /*ヘッダーの設定*/
+ #gnav_pc {
+    clear: both;
+    height: 40px;
+    border-top: 1px solid #a0522d;
+    /*border-bottom: 1px solid #a0522d; */
+}
+
+#gnav_pc ul li{ 	
+    display: inline;
+ }
+
+ #gnav_pc ul li a{
+    color : #a0522d;
+ }
+
+
+
+#footer{
+    width: auto;
+    height:100px;
+    color : #a0522d;
+    font-size:1em;
+    text-align : center;
+  }
+
+#footer ul li{ 	
+    display: inline;
+ }
+
+
+ #setcolor{
+    color : #a0522d;
+ }

@@ -33,13 +33,11 @@ module BookSearch
     #ジェネレータ(rails g(enerate))の利用時にspecファイルも同時に作成されるように設定変更
     config.generators do |g|
       g.test_framework :rspec,
-                       fixtures: true,
+                       fixtures: false,
                        view_specs: false,
                        helper_specs: false,
                        routing_specs: false,
-                       controller_specs: true,
                        request_specs: false
-      g.fixture_replacement :factory_bot, dir: "spec/factories"
     end
   end
 end
