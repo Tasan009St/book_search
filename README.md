@@ -1,24 +1,17 @@
-# README
+*本検索サービス*
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+* webアプリケーションの公開先
+https://shielded-mountain-73603.herokuapp.com/
 
 * Ruby version
+ruby 2.4.5
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
+* Rails version
+Rails 5.2.2
 
 * Deployment instructions
+Heroku
 
-* ...
+* Database creation
+Postgresql
+
