@@ -1,3 +1,43 @@
 // Place all the styles related to the TopPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*メイン検索ボックスのスタイル*/
+.search_container{
+    position: relative;
+    box-sizing: border-box;
+    border: 2px solid #a0522d;
+    display: block;
+    padding: 3px 10px;
+    border-radius: 8px;
+    height: 3.0em;
+    width: 500px;
+    overflow: hidden;
+    outline: 0;
+    display: inline-block;
+    
+}
+
+.main_form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .main_form .search{
+    cursor: pointer;
+    font-family: FontAwesome;
+    border: none;
+    background: #a0522d;
+    color: #fff;
+    width: 3.5em;
+    height: 3.0em;
+    right:0px;
+    top: -3px;
+    outline : none;
+    border-radius: 8px;
+    display: inline-block;
+  }
+
+  
+  

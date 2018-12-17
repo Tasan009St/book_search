@@ -98,8 +98,3 @@ RSpec.configure do |config|
   Kernel.srand config.seed
 =end
 end
-
-#Factory Botの設定
-RSpec.configure do |config|
-  config.include FactoryBot::Syntax::Methods
-end
