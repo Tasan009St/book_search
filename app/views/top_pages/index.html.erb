@@ -1,7 +1,7 @@
 <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
  <div class="main_form ">
- <%= form_tag('/', method: :get) do %>
+ <%= form_tag('/books/index', method: :get) do %>
         <%= text_field_tag :book, "",  class: "search_container", name: "keyword", placeholder: "キーワードを打ち込んでください"%>
-        <input class="search" type="submit" value="&#xf002">
+        <input class="search" type="submit">
 <% end %>
 </div>

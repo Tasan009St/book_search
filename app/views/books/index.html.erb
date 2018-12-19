@@ -1,15 +1,14 @@
 <h3>Book List </h3>
-    <%= form_with model:[@question,@answer], local: true do |f| %>
-    <%=f.hidden_field :question_id, {value: @question.id}  %>
-        <div class="form-group">
-            <label>Name</label>
-            <%= f.text_field :name,class:'form-control' %>
-        </div>
-        <div class="form-group">
-            <label>Content</label>
-            <%= f.text_area :content,class:'form-control' %>
-        </div>
-        <div class="text-center">
-            <%= f.submit "Post", class:'btn btn-primary' %>
-        </div>
-    <% end %>
+    <table class = "table table-striped">
+        <!-- talbeヘッダー部 -->
+        <thead class ="thead-light">
+            <tr>
+                <th>ID</th>
+            </tr>
+            </thead>
+            <%  @list.item.each do |book| %>
+                <tr>
+                <td><%= book.volume_info.title %></td> 
+                </tr>
+            <% end %>
+    </table>
