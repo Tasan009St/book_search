@@ -14,7 +14,7 @@ class BooksController < ApplicationController
     
     #@book = Book.where(isbn:params[:isbn])
     #amazon api取得のため一時的に全件表示にする。
-    @book = Book.all
+    #@book = Book.all
 
 
   end 
