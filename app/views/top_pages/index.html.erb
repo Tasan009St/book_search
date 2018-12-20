@@ -1,7 +1,7 @@
 <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
  <div class="main_form ">
  <%= form_tag('/books/index', method: :get) do %>
-        <%= text_field_tag :book, "",  class: "search_container", name: "isbn", placeholder: "978-4-7853-1562-7を打ち込んでください"%>
+        <%= text_field_tag :book, "",  class: "search_container", name: "isbn", placeholder: "キーワードを打ち込んでください"%>
         <input class="search" type="submit">
 <% end %>
 </div>

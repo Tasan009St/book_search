@@ -10,8 +10,13 @@ class BooksController < ApplicationController
     #drive.key = 'AIzaSyCDku6XekSwpF1Mjrml5ukMMp_F2JPaU4Q' 
     # Search for files in Drive (first page only)
     #@book = drive.list_files(q: "title contains 'finances'")
-    byebug
-    @book = Book.where(isbn:params[:isbn])
+    
+    
+    #@book = Book.where(isbn:params[:isbn])
+    #amazon api取得のため一時的に全件表示にする。
+    @book = Book.all
+
+
   end 
   
   
