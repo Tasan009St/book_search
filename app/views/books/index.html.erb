@@ -1,14 +1,19 @@
-<table class = "table table-striped">
-        <!-- talbeヘッダー部 -->
-        <h2>キーワードに合致する書籍がありません</h2>
-        <thead class ="thead-light">
-            <tr>
-                <th>Title</th>
-                <th>ISBN</th>
-            </tr>
-            </thead>
+        <table class = "table table-striped">
+            <!-- talbeヘッダー部 -->
+            <thead class ="thead-light">
                 <tr>
-                <td></td>
-                <td></td>
+                    <th>ISBN</th>
+                    <th>Title</th>
+                    <th>本の著者</th>
                 </tr>
-</table>
+            </thead>
+            <!-- talbeのbody部 -->
+            <tbody>
+                <%  @book.each do |book| %>
+                    <tr>
+                    <td><%= book.isbn %></td> 
+                    <td><%= book.title %></td> 
+                    <td><%= book.author_id %></td> 
+                </tr>
+                <% end %>
+     </table> 

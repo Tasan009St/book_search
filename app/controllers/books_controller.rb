@@ -1,9 +1,6 @@
 
 
 class BooksController < ApplicationController
-  def new
-  end
-
   def index
     #require 'google/apis/drive_v2'
     #drive = Google::Apis::DriveV2::DriveService.new
@@ -13,15 +10,35 @@ class BooksController < ApplicationController
     
     
     #@book = Book.where(isbn:params[:isbn])
-    #amazon api取得のため一時的に全件表示にする。
+    #amazon api取得のため一時的 cpmcに全件表示にする。
     #@book = Book.all
-
+    @book = Book.all
 
   end 
   
+
+  def new
+    #amazon API取得のため一時的に一定の本を登録できる状態にwebサイトをしておく
+    @book = Book.new
+  end
+
+  def create
+    @book = Book.new(register_params)
+    if @book.save
+      redirect_to root_path, notice: 'Success'
+    else
+       flash[:alert] = 'Save Error' 
+       render :new          
+    end
+  end
   
   private
   def search_params
     params.require(:book).permit(:isbn)
   end
+  
+  def register_params
+    params.require(:book).permit(:isbn,:title,:auhor_id)
+  end
+
 end
