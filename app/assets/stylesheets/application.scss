@@ -16,11 +16,20 @@
 
 
  
-  body {
+body {
     a:link {color:#a0522d; text-decoration:none }
     a:visited { color:#a0522d; text-decoration:none }
     li:link {color:#a0522d; text-decoration:none }
 }
+
+.margin-info{
+   margin-left:45px;
+}
+
+
+.center{
+   text-align: center;
+ }
 
  /*footerを下にする設定*/
  body,
@@ -60,6 +69,10 @@
     color : #a0522d;
  }
 
+.h-wrap01 a{
+   margin-right: 50px;
+
+ }
 
  /*フッターの設定*/
 #footer{
