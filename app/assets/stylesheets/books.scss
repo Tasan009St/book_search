@@ -24,3 +24,22 @@ ul {
     display: block;
     margin: 0 auto;
 }
+
+table{
+    width: 100%;
+    table-layout: fixed;    
+  }
+
+table th{
+    padding : 20px 10px;
+    width: 30%;
+    border:solid 1px #aaaaaa;
+    color:white;
+    background-color: #f44336;
+  }
+  
+  table td{
+    border:solid 1px #aaaaaa;
+    padding : 20px 10px;
+    width: 70%;
+  }
