@@ -1,10 +1,7 @@
 class Book < ApplicationRecord
-#本検索のメソッド
-  def self.search(search)
-    if search
-      Book.where(['content LIKE ?', "%#{search}%"])
-    else
-      Book.all
-    end
-  end
+#isbn検索のメソッド
+# ユーザー名による絞り込み
+scope :get_by_isbn, ->(isbn) {
+    where("isbn like ?", "%#{isbn}%")
+    }
 end

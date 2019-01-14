@@ -4,7 +4,7 @@
  </div>
 <div class="main_form ">
  <%= form_tag('/books/index', method: :get) do %>
-        <%= text_field_tag :book, "",  class: "search_container", name: "isbn", placeholder: "isbnを打ち込んでください"%>
+        <%= text_field_tag :isbn, params[:isbn], class: "search_container", name: "isbn", placeholder: "isbnを打ち込んでください"%>
         <%= submit_tag 'Search', :name => nil %>
 <% end %>
 </div>
