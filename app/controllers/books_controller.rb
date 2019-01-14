@@ -12,6 +12,9 @@ class BooksController < ApplicationController
     #@book = Book.where(isbn:params[:isbn])
     #amazon api取得のため一時的 cpmcに全件表示にする。
     #@book = Book.all
+
+
+    #book isbnでの検索。検索結果がない場合は全件表示
     @book = Book.all
     if params[:isbn].present?
       @book = @book.get_by_isbn params[:isbn]
