@@ -1,6 +1,6 @@
 <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
  <div class="main_form ">
- <h1>ほんをさがそう！</h1>
+ <h1>小説をさがす</h1>
  </div>
 <div class="main_form ">
  <%= form_tag('/books/index', method: :get) do %>
@@ -8,6 +8,64 @@
         <%= submit_tag 'Search', :name => nil %>
 <% end %>
 </div>
- <div class="main_form ">
+ <div class="index_bottom_message">
 <%= link_to '本が見つからない場合は登録', books_new_path %>
+</div>
+
+<div class="main_form ">
+        <div class="book_feature">
+            <p>基本情報</p>
+        <div>    
+        <hr>
+        <div class="book_category">
+            <input type="checkbox" name="example" value="mistery">小説
+            <input type="checkbox" name="example" value="mistery">コミック
+            <input type="checkbox" name="example" value="mistery">雑誌
+            <input type="checkbox" name="example" value="mistery">専門書
+        </div>    
+        <div class="book_feature">
+            <p>時代設定</p>
+        <div>    
+        <hr>
+        <div class="book_era">
+            <input type="checkbox" name="example" value="mistery">太古
+            <input type="checkbox" name="example" value="mistery">平安
+            <input type="checkbox" name="example" value="mistery">鎌倉
+            <input type="checkbox" name="example" value="mistery">戦国時代
+            <input type="checkbox" name="example" value="mistery">江戸
+            <input type="checkbox" name="example" value="mistery">幕末
+            <input type="checkbox" name="example" value="mistery">明治
+            <input type="checkbox" name="example" value="mistery">大正
+            <input type="checkbox" name="example" value="mistery">昭和前期
+            <input type="checkbox" name="example" value="mistery">昭和後期
+            <input type="checkbox" name="example" value="mistery">平成
+            <input type="checkbox" name="example" value="mistery">現代
+        </div>    
+        <div class="book_feature">
+            <p>舞台設定</p>
+        <div>    
+        <hr>
+        <input type="checkbox" name="example" value="mistery">中華
+        <input type="checkbox" name="example" value="mistery">欧州
+        <input type="checkbox" name="example" value="mistery">米国
+        <input type="checkbox" name="example" value="mistery">アジア
+        <input type="checkbox" name="example" value="mistery">アフリカ
+        <div class="book_feature">
+            <p>設定</p>
+        <div>  
+        <hr>
+        <input type="checkbox" name="example" value="mistery">ファンタジー
+        <input type="checkbox" name="example" value="mistery">軍記もの
+        <input type="checkbox" name="example" value="mistery">ファッション
+        <input type="checkbox" name="example" value="mistery">音楽
+        <input type="checkbox" name="example" value="mistery">探偵
+        <input type="checkbox" name="example" value="mistery">警察
+        <input type="checkbox" name="example" value="mistery">検事
+        <input type="checkbox" name="example" value="mistery">医者
+        <input type="checkbox" name="example" value="mistery">会社員
+        <input type="checkbox" name="example" value="mistery">フリーター
+        <input type="checkbox" name="example" value="mistery">経営者
+        
+        <br>
+        <input class="search" type="submit" value="Search">
 </div>

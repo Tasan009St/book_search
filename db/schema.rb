@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_20_150049) do
+ActiveRecord::Schema.define(version: 2019_02_06_125400) do
+
+  create_table "book_features", force: :cascade do |t|
+    t.string "isbn"
+    t.integer "fetnum"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "books", force: :cascade do |t|
     t.string "isbn"
@@ -19,6 +26,13 @@ ActiveRecord::Schema.define(version: 2018_12_20_150049) do
     t.string "cover_image_path"
     t.string "publisher"
     t.date "first_publish"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "features", force: :cascade do |t|
+    t.integer "fetnum"
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

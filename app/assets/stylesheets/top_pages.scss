@@ -4,25 +4,19 @@
 
 /*メイン検索ボックスのスタイル*/
 .search_container{
-    position: relative;
-    box-sizing: border-box;
-    border: 2px solid #a0522d;
-    display: block;
-    padding: 3px 10px;
-    border-radius: 8px;
-    height: 3.0em;
-    width: 500px;
-    overflow: hidden;
-    outline: 0;
-    display: inline-block;
-    
+  position: relative;
+  box-sizing: border-box;
+  border: 2px solid #a0522d;
+  display: block;
+  padding: 3px 10px;
+  border-radius: 8px;
+  height: 3.0em;
+  width: 500px;
+  overflow: hidden;
+  outline: 0;
+  display: inline-block; 
 }
 
-.main_form{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
   
   .main_form .search{
     cursor: pointer;
@@ -30,7 +24,7 @@
     border: none;
     background: #a0522d;
     color: #fff;
-    width: 3.5em;
+    width: 7em;
     height: 3.0em;
     right:0px;
     top: -3px;
@@ -40,4 +34,14 @@
   }
 
   
-  
+.main_form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.index_bottom_message{ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+} 

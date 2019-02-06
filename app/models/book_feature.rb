@@ -1,0 +1,2 @@
+class BookFeature < ApplicationRecord
+end
