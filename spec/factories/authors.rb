@@ -1,5 +1,5 @@
 FactoryBot.define do
-  factory :book do
+  factory :author do
     
   end
 end

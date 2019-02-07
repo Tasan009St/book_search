@@ -10,29 +10,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_06_125400) do
+ActiveRecord::Schema.define(version: 2019_02_07_150825) do
 
-  create_table "book_features", force: :cascade do |t|
-    t.string "isbn"
-    t.integer "fetnum"
+  create_table "authors", force: :cascade do |t|
+    t.string "author_id"
+    t.string "author_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "books", force: :cascade do |t|
+  create_table "book_features", force: :cascade do |t|
+    t.string "book_id"
+    t.integer "feature_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["feature_id"], name: "index_book_features_on_feature_id"
+  end
+
+  create_table "books", primary_key: "book_id", id: :string, force: :cascade do |t|
     t.string "isbn"
-    t.string "author_id"
+    t.integer "author_id"
     t.string "title"
     t.string "cover_image_path"
     t.string "publisher"
     t.date "first_publish"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["author_id"], name: "index_books_on_author_id"
+    t.index ["book_id"], name: "index_books_on_book_id", unique: true
   end
 
   create_table "features", force: :cascade do |t|
-    t.integer "fetnum"
-    t.string "name"
+    t.string "feature_id"
+    t.string "feature_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

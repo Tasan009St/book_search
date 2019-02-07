@@ -33,8 +33,10 @@ class BooksController < ApplicationController
   end
 
   def create
-    @book = Book.new(register_params)
-    if @book.save
+    @book = Book.new(register_params_book)
+       @id = Book.where(isbn = params[:isbn]).select(:id) 
+       @book_feature = BookFeature.new(:book_id => @id)
+    if @book.save && @book_feature.save
       redirect_to root_path, notice: 'Success'
     else
        flash[:alert] = 'Save Error' 
@@ -47,8 +49,12 @@ class BooksController < ApplicationController
     params.require(:book).permit(:isbn)
   end
   
-  def register_params
+  def register_params_book
     params.require(:book).permit(:isbn,:title,:author_id)
+  end
+
+  def register_params_book_feature
+    params.require(:book).permit(:isbn)
   end
 
 end
